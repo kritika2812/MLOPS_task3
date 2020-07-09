@@ -9,7 +9,7 @@ VARIOUS TOOLS ARE USED IN THIS TASK :-
 
 Task Description:-
 
-1. Create a container image that’s has Python3 ,Keras ,numpy and all the required libraries installed using dockerfile
+1.Create a container image that’s has Python3 ,Keras ,numpy and all the required libraries installed using dockerfile
 When we launch this image, it should automatically starts train the model in the container.
 
 2.Create a job chain of job1, job2, job3, job4 and job5 using build pipeline plugin in Jenkins
@@ -41,10 +41,10 @@ Lets begin the task:
 	 - git push -u origin master
 	 
 	 
-- 	Now setting up your ngrok tunnel	
-    We set up ngrok software for the port and protocol Jenkins is running. In my case Jenkins is running on port 8080 and using http protocol. Use command-
+- Now setting up your ngrok tunnel	
+   We set up ngrok software for the port and protocol Jenkins is running. In my case Jenkins is running on port 8080 and using http protocol. Use command-
 	
-	./ngrok http 8080
+      ./ngrok http 8080
 	
 	We will use this ip provided by ngrok in setting up our web-hooks in Github repo.
 	
