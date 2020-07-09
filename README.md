@@ -1,5 +1,6 @@
 AUTOMATION OF MACHINE LEARNING (DL)
-  VARIOUS TOOLS ARE USED IN THIS TASK :-
+
+VARIOUS TOOLS ARE USED IN THIS TASK :-
 
 1. Git and Github- for version control and hosting our repository.
 2. Jenkins- to automate various jobs.
@@ -111,7 +112,7 @@ Lets begin the task:
  
 
 
-
+That's you automate machine learning models.
 
 
 
