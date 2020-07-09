@@ -86,6 +86,24 @@ Lets begin the task:
  - JOB 4:
  In build triggers , write job 3 to watch 
  now, paste the following code in build shell
+ if [[ "$(sudo cat /root/mlopsws/show_accuracy.txt)" < "0.987" ]]
+ then
+ echo "Twerking the model"
+ sudo python3 /root/mlopsws
+ 
+ sudo curl --user "admin:kritika" http://192.168.99.103:8080/job/job6/build?token=redhat
+ 
+ sudo curl --user "admin:kritika" http://192.168.99.103:8080/job/job2/build?token=redhat
+ 
+ exit 1
+
+ else 
+ 
+ exit 0
+
+ fi
+ 
+ 
   ![](screenshots/Job4_config1.png)
   
   As JOB4 will run again and again until desired accuracy is not acheived, Our show_display.html file will also get changed by JOB3 and will show different accuracies and hyperparameters from each run of JOB2 model.
