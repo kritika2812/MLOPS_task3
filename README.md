@@ -112,7 +112,7 @@ Lets begin the task:
  
 
 
-That's you automate machine learning models.
+That's how you automate machine learning models.
 
 
 
