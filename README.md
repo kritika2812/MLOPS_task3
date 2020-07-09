@@ -86,9 +86,13 @@ Lets begin the task:
  - JOB 4:
  In build triggers , write job 3 to watch 
  now, paste the following code in build shell
+ 
  if [[ "$(sudo cat /root/mlopsws/show_accuracy.txt)" < "0.987" ]]
+ 
  then
+ 
  echo "Twerking the model"
+ 
  sudo python3 /root/mlopsws
  
  sudo curl --user "admin:kritika" http://192.168.99.103:8080/job/job6/build?token=redhat
