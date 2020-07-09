@@ -56,17 +56,14 @@ Lets begin the task:
 
 - NOW CREATE JOB 1 IN JENKINS:-
   JOB1 will automatically pull the Github repo to a specified directory in Rhel Os whenever developer pushes any new code.
+  ![](screenshots/job1_config.png)
    
 - NOW CREATE OWN CUSTOMIZED IMAGE FOR THE TASK
   To create Docker image first create a new folder named ws using-
   #mkdir mlopsws
   #cd mlopsws
   #gedit Dockerfile
-   ** paste the following the code
-   
-   
-   
-   
+  ![](screenshots/Dockerfile.png)
    
    after saving this file. Write the following command 
    # docker build -t task3:v1(now image is tagged with version(v1)
@@ -74,24 +71,25 @@ Lets begin the task:
    
  - JOB 2 :
  By looking at the code or program file, automatically start the respective machine learning software installed, Interpreter install image container to deploy code and start training
- 
+![](screenshots/Job2_config.png)
+![](screenshots/Job2_output.png) 
  
  - JOB 3 :
  First start the services of webserver in base OS
  #systemctl start httpd
  Set Build Triggers to ->Build after other Projects are build->put JOB2 in it.
  Paste the following code in build shell
- ***
+ ![](screenshots/Job2_config.png)
+ 
  After successful build of JOB3, We can see show_output.html file in our local web-browser.
- 
- 
  
  - JOB 4:
  In build triggers , write job 3 to watch 
  now, paste the following code in build shell
-  ***
+  ![](screenshots/Job4_config1.png)
   
   As JOB4 will run again and again until desired accuracy is not acheived, Our show_display.html file will also get changed by JOB3 and will show different accuracies and hyperparameters from each run of JOB2 model.
+  ![](screenshots/Job2_html.png)
  
  
  - JOB 5:
@@ -99,16 +97,16 @@ Lets begin the task:
  
  In build triggers , write job 4 to watch.
  now, paste the following code in build shell
- *****
+ ![](screenshots/Job5_config.png)
  
  - JOB 6:
  when JOB2 model does not acheived the desired accuracy, Then JOB4 will run JOB2 and JOB6. JOB6 will send the message of unsuccess and running the tweaking code by running model_lessaccuracy_mail.py.
- 
- 
+  ![](screenshots/Job6_config.png)
  - JOB 7:
  JOB7 will run Every Hour and check If Container where model is running, Fails due to any reason then this job should automatically start the container again from where the last trained model left.
  
  In build triggers , click on poll Scm and write the syntax -> H * * * *
+ ![](screenshots/Job7_config.png)
  
 
 
