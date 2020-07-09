@@ -1,10 +1,10 @@
 AUTOMATION OF MACHINE LEARNING (DL)
 VARIOUS TOOLS ARE USED IN THIS TASK :-
 
-Git and Github- for version control and hosting our repository.
-Jenkins- to automate various jobs.
-Rhel8- as a base os for running services like httpd, jenkins,ngrok.
-Docker- to run our python model.
+1. Git and Github- for version control and hosting our repository.
+2. Jenkins- to automate various jobs.
+3. Rhel8- as a base os for running services like httpd, jenkins,ngrok.
+4. Docker- to run our python model.
 
 Task Description:-
 
